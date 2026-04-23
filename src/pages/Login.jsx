@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router';
 import { useLocation } from 'react-router';
 
 const Login = () => {
-    const {signIn, setUser} = use(AuthContext);
+    const {signIn, setUser, loading} = use(AuthContext);
     const navigate = useNavigate();
 
     const location = useLocation();

@@ -8,6 +8,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const ToyDetails = () => {
+
     const toys = useLoaderData();
     const toyIdS = useParams().toyId;
 
@@ -21,10 +22,10 @@ const ToyDetails = () => {
                 <Header></Header>
             </header>
             <main>
-                <div className='max-w-[1200px] mx-auto px-5 w-full'>
-                    <div className="card card-side bg-base-100 shadow-xl">
-                        <figure><img src={pictureURL} alt="Movie" /></figure>
-                        <div className="card-body">
+                <div className='max-w-[1200px] mx-auto px-5 w-full toy-details'>
+                    <div className="card card-side bg-base-100 shadow-xl mt-5 my-20">
+                        <figure className='max-w-[50%]'><img src={pictureURL} alt="Movie" /></figure>
+                        <div className="card-body flex items-start">
                             <h2 className="card-title">{toyName}</h2>
                             <p>{description}</p>
                             <p>Price: ${price}</p>

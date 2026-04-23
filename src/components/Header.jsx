@@ -28,7 +28,7 @@ const Header = () => {
                 <div>
                     <ul className="menu-part flex gap-5">
                         <NavLink to="/">Home</NavLink>
-                        <NavLink to="/toy">Toys</NavLink>
+                        <NavLink to="/toy-details/1">Toys</NavLink>
                         <NavLink to="/blog">Blog</NavLink>
                         <NavLink to="/contact">Contact</NavLink>
                     </ul>

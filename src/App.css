@@ -40,3 +40,11 @@
 .popular_slider_next {
   right: 0;
 }
+
+.toy-details {
+  .card-body {
+    *{
+      max-height: max-content;
+    }
+  }
+}
