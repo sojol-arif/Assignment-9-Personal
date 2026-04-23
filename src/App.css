@@ -17,6 +17,10 @@
   font-family: "Nunito", sans-serif;
 }
 
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 700;
+  opacity: 1;
+}
 .swiper-pagination{
   position: static !important;
 }
@@ -47,4 +51,9 @@
       max-height: max-content;
     }
   }
+}
+
+/* Form CSS */
+form input{
+  margin-bottom: .5rem;
 }

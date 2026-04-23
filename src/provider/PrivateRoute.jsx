@@ -10,11 +10,13 @@ const PrivateRoute = ({ children }) => {
 
     const location = useLocation();
 
-    if(loading) {
-        return <Loading></Loading>;
+    if (!user) {
+        if (loading) {
+            return <Loading></Loading>;
+        };
     }
-
-    if(user && user?.email) {
+    
+    if (user && user?.email) {
         return children;
     }
 

@@ -7,12 +7,20 @@ import { use } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import { useNavigate } from 'react-router';
 import { useLocation } from 'react-router';
+import { useEffect } from 'react';
 
 const Login = () => {
-    const {signIn, setUser, loading} = use(AuthContext);
+    const { signIn, setUser, loading } = use(AuthContext);
     const navigate = useNavigate();
 
     const location = useLocation();
+
+    useEffect(() => {
+        document.title = "Login | Toy Store";
+    }, []);
+
+    console.log(location);
+    console.log(location.state);
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -21,16 +29,16 @@ const Login = () => {
         const password = form.password.value;
         // Implement login logic here using email and password
         signIn(email, password).then((userCredential) => {
-                const user = userCredential.user;
-                console.log("Logged in user:", user);
-                setUser(user);
-                navigate(location.state? location.state : '/');
-            })
+            const user = userCredential.user;
+            console.log("Logged in user:", user);
+            setUser(user);
+            navigate(location.state ? location.state : '/');
+        })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 console.log(errorCode, errorMessage);
-            });     
+            });
     }
 
     return (

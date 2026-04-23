@@ -6,6 +6,8 @@ import Register from "../pages/Register";
 import AuthenticationLayout from "../layouts/AuthenticationLayout";
 import PrivateRoute from "../provider/PrivateRoute";
 import ToyDetails from "../pages/ToyDetails";
+import Error from "../pages/Error";
+import MyProfile from "../pages/MyProfile";
 
 const router = createBrowserRouter([
     {
@@ -34,13 +36,17 @@ const router = createBrowserRouter([
         ]
     },
     {
+        path:"/profile",
+        element: <PrivateRoute><MyProfile></MyProfile></PrivateRoute>,
+    },
+    {
         path: "/toy-details/:toyId",
         element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
         loader: () => fetch('/toys.json'),
     },
     {
         path: "/*",
-        element: <h2>Error 404</h2>
+        element: <Error></Error>
     }
 ]);
 

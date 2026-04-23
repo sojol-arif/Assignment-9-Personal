@@ -4,9 +4,15 @@ import { Link, NavLink } from 'react-router';
 import { use } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import { useNavigate } from 'react-router';
+import Loading from './Loading';
 
 const Header = () => { 
-    const {user, logOut} = use(AuthContext);
+    const {user, logOut, loading} = use(AuthContext);
+
+    console.log("Check user in header:", user); 
+    const photoLink = user?.photoURL;
+
+
     const navigate = useNavigate();
 
     const handleLogout = () => {
@@ -34,12 +40,18 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className='flex'>
-                    {user ? <span><FaUser /></span> : ""}
-                    {user ? <Link to="/auth/logout" className='ml-2 btn btn-danger' onClick={handleLogout}>Logout</Link> : (
-                        <>
-                         <Link to="/auth/login" className='ml-2 btn btn-primary'>Login</Link><Link to="/auth/register" className='ml-2 btn btn-secondary'>Sign Up</Link>
-                        </>
-                    )}
+                    {loading ? 
+                    <Loading></Loading> 
+                    : 
+                    <>
+                        {user?photoLink ? (<Link to="/profile"><img src={user.photoURL} alt="Profile" className='w-10 h-10 rounded-full' /></Link> ) : ( <FaUser className='w-10 h-10 rounded-full' />) : null}
+
+                        {user ? <Link to="/auth/logout" className='ml-2 btn btn-danger' onClick={handleLogout}>Logout</Link> : (
+                            <>
+                            <Link to="/auth/login" className='ml-2 btn btn-primary'>Login</Link><Link to="/auth/register" className='ml-2 btn btn-secondary'>Register</Link>
+                            </>
+                        )}
+                    </>}
                 </div>
             </div>
         </div>
