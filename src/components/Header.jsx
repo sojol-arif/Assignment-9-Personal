@@ -5,11 +5,9 @@ import { use } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import { useNavigate } from 'react-router';
 import Loading from './Loading';
-import { useState } from 'react'
 
 const Header = () => { 
     const {user, logOut, loading} = use(AuthContext);
-    const [isHovered, setIsHovered] = useState(false);
 
     const photoLink = user?.photoURL;
 
@@ -27,7 +25,7 @@ const Header = () => {
 
     return (
         <div className='max-w-[1200px] mx-auto px-5'>
-            <div className='flex justify-between items-center py-5'>
+            <div className='flex-col md:flex-row gap-5 flex justify-between items-center py-5'>
                 <div className="logo-part">
                     <Link to="/" className='text-[30px] font-black'>EcoToy</Link>
                 </div>
@@ -45,10 +43,8 @@ const Header = () => {
                     : 
                     (<>
                         {user?photoLink ? 
-                        (<Link to="/profile" onMouseEnter={() => setIsHovered(true) }
-                        onMouseLeave={() => setIsHovered(false)}>
-                        
-                            {isHovered ? <span> {user.displayName} </span> : <img src={user.photoURL} alt="Profile" className='w-10 h-10 rounded-full' /> }
+                        (<Link to="/profile">
+                            <img src={user.photoURL} alt="Profile" className='w-10 h-10 rounded-full' />
                             
                         </Link> 
                         

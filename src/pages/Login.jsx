@@ -54,14 +54,14 @@ const Login = () => {
             <div className='max-w-[1200px] mx-auto px-5 w-full'>
                 <div className="hero-content flex-col w-full">
                     <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold mb-2.5">Account Login</h1>
+                        <h1 className="text-[30px] md:text-[36px] lg:text-[42px] font-bold">Log In</h1>
                     </div>
                     <div className="card bg-base-100 w-full shrink-0 shadow-2xl w-full sm:w-[450px]">
                         <form className="card-body" onSubmit={handleLogin}>
                             <fieldset className="fieldset">
-                                <label className="label">Email</label>
+                                <label className="label text-[14px]">Email</label>
                                 <input type="email" name='email' className="input w-full mb-2" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} />
-                                <label className="label">Password</label>
+                                <label className="label text-[14px]">Password</label>
                                 <span className='relative w-full'>
                                     <input type={showPassword ? 'password' : 'text'} name='password' className="input w-full" placeholder="Password" />
                                     {showPassword ?

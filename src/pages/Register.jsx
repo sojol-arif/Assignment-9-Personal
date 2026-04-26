@@ -111,27 +111,31 @@ const Register = () => {
                 {!user &&
                     <div className="hero-content flex-col w-full">
                         <div className="text-center lg:text-left">
-                            <h1 className="text-5xl font-bold mb-2.5">Account Registration</h1>
+                            <h1 className="text-[30px] md:text-[36px] lg:text-[42px] font-bold">Sign In</h1>
                         </div>
                         <div className="card bg-base-100 w-full shrink-0 shadow-2xl w-full sm:w-[450px]">
                             <form className="card-body" onSubmit={handleRegister}>
                                 <fieldset className="fieldset">
-                                    <label className="label">Name</label>
-                                    <input type="text" name='name' className="input w-full mb-2" placeholder="Name" required/>
-                                    <label className="label">Email</label>
+                                    <label className="label text-[14px]">Name</label>
+                                    <input type="text" name='name' className="input w-full mb-2" placeholder="Name" required />
+                                    <label className="label text-[14px]">Email</label>
                                     <input type="email" name='email' className="input w-full mb-2" placeholder="Email" />
-                                    <label className='label'>Photo</label>
-                                    <input type="text" name='photo' className="input w-full mb-2" placeholder="Photo URL" required/>
-                                    <label className="label">Password</label>
+                                    <label className='label text-[14px]'>Photo</label>
+                                    <input type="text" name='photo' className="input w-full mb-2" placeholder="Photo URL" required />
+                                    <label className="label text-[14px]">Password</label>
                                     <span className='relative w-full'>
                                         <input type={showPassword ? 'password' : 'text'} name='password' className="input w-full" placeholder="Password" />
-                                        {showPassword ? 
-                                        <FaEye className='absolute right-3 top-2 w-5 h-5 cursor-pointer' onClick={showPasswordText} />
-                                        : 
-                                        <FaEyeSlash className='absolute right-3 top-2 w-5 h-5 cursor-pointer' onClick={showPasswordText} />}
+                                        {showPassword ?
+                                            <FaEye className='absolute right-3 top-2 w-5 h-5 cursor-pointer' onClick={showPasswordText} />
+                                            :
+                                            <FaEyeSlash className='absolute right-3 top-2 w-5 h-5 cursor-pointer' onClick={showPasswordText} />}
                                     </span>
 
+                                    {error && <p className='text-red-500 text-center mt-2 font-bold text-[18px]'>{error}</p>}
+                                    
                                     <button className="btn btn-neutral mt-4">Register</button>
+
+
 
                                     <Link to="/auth/login" className="mt-4 block text-center text-[14px]">
                                         Already have an account? <span className="text-primary">Log in</span>
@@ -141,7 +145,6 @@ const Register = () => {
                                         Continue with Google
                                     </button>
                                 </fieldset>
-                                {error && <p className='text-red-500 text-center mt-2 font-bold text-[18px]'>{error}</p>}
                             </form>
                         </div>
                     </div>}
