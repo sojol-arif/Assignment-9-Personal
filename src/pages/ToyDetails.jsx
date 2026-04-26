@@ -63,21 +63,21 @@ const ToyDetails = () => {
                             <Link to="/" className='border border-1 bg-transparent px-12 py-3 mt-5 rounded-full font-bold hover:bg-primary duration-300 ease hover:text-[#fff] '>Add to Cart</Link>
                         </div>
                     </div>
-                    <form action="" className='w-full max-w-[400px] mx-auto mb-25' onSubmit={handleSubmit}>
-                        <fieldset className='mb-5'>
-                            <h3 className='text-lg font-black mb-3 text-center text-[36px]'>Try Now Toy</h3>
-                            <div className='flex flex-col gap-3'>
-                                <input type="text" name="name" placeholder="Your Name" className="input input-bordered w-full h-12" required />
-                                <input type="email" name="email" placeholder="Your Email" className="input input-bordered w-full h-12" required />
-                                <button className='btn btn-primary self-start text-[#fff] rounded-full px-15 uppercase mt-2 mx-auto'>Try Now</button>
-                            </div>
-                        </fieldset>
-                    </form>
-                    <Feedback></Feedback>
                     <ToastContainer
                         position="bottom-right"
                     />
                 </div>
+                <form action="" className='w-full max-w-[400px] px-5 mx-auto mb-25' onSubmit={handleSubmit}>
+                    <fieldset className='mb-5'>
+                        <h3 className='text-lg font-black mb-3 text-center text-[36px]'>Try Now Toy</h3>
+                        <div className='flex flex-col gap-3'>
+                            <input type="text" name="name" placeholder="Your Name" className="input input-bordered w-full h-12" required />
+                            <input type="email" name="email" placeholder="Your Email" className="input input-bordered w-full h-12" required />
+                            <button className='btn btn-primary self-start text-[#fff] rounded-full px-15 uppercase mt-2 mx-auto'>Try Now</button>
+                        </div>
+                    </fieldset>
+                </form>
+                <Feedback></Feedback>
             </main>
             <footer>
                 <Footer></Footer>
