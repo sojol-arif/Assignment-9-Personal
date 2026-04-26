@@ -14,9 +14,12 @@ import { Navigation } from 'swiper/modules';
 
 const Product = ({ toys }) => {
 
+    // Popular Toys
+    const popularToys = toys.filter(toy=> toy.popular == true);
+
     return (
         <Suspense fallback={<span className="loading loading-spinner loading-xs"></span>}>
-            <div className='max-w-[1200px] mx-auto px-5 my-20'>
+            <div className='max-w-[1200px] mx-auto px-5 mt-15 md:mt-20 mb-20 md:mb-25'>
                 <Swiper
                     slidesPerView={5}
                     spaceBetween={30}
@@ -27,7 +30,7 @@ const Product = ({ toys }) => {
                     modules={[Navigation]}
                     className="mySwiper"
                 >
-                    {toys.map(toy=> <SwiperSlide><ProductCard key={toy.toyId} toy={toy}></ProductCard></SwiperSlide>)}
+                    {popularToys.map(toy=> <SwiperSlide><ProductCard key={toy.toyId} toy={toy}></ProductCard></SwiperSlide>)}
                     <button className="popular_slider_prev text-primary">
                         <LiaChevronLeftSolid />
                     </button>

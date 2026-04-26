@@ -8,9 +8,16 @@ import { AuthContext } from '../provider/AuthProvider';
 import { useNavigate } from 'react-router';
 import { useLocation } from 'react-router';
 import { useEffect } from 'react';
+import { useState } from 'react';
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
-    const { signIn, setUser, loading } = use(AuthContext);
+    const { signIn, setUser } = use(AuthContext);
+
+    const [showPassword, setShowPassword] = useState(true);
+    const [email, setEmail] = useState("");
+
     const navigate = useNavigate();
 
     const location = useLocation();
@@ -18,9 +25,6 @@ const Login = () => {
     useEffect(() => {
         document.title = "Login | Toy Store";
     }, []);
-
-    console.log(location);
-    console.log(location.state);
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -41,6 +45,10 @@ const Login = () => {
             });
     }
 
+    const showPasswordText = () => {
+        setShowPassword(!showPassword);
+    }
+
     return (
         <div className='flex items-center'>
             <div className='max-w-[1200px] mx-auto px-5 w-full'>
@@ -52,10 +60,16 @@ const Login = () => {
                         <form className="card-body" onSubmit={handleLogin}>
                             <fieldset className="fieldset">
                                 <label className="label">Email</label>
-                                <input type="email" name='email' className="input w-full" placeholder="Email" />
+                                <input type="email" name='email' className="input w-full mb-2" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} />
                                 <label className="label">Password</label>
-                                <input type="password" name='password' className="input w-full" placeholder="Password" />
-                                <div><a className="link link-hover">Forgot password?</a></div>
+                                <span className='relative w-full'>
+                                    <input type={showPassword ? 'password' : 'text'} name='password' className="input w-full" placeholder="Password" />
+                                    {showPassword ?
+                                        <FaEye className='absolute right-3 top-2 w-5 h-5 cursor-pointer' onClick={showPasswordText} />
+                                        :
+                                        <FaEyeSlash className='absolute right-3 top-2 w-5 h-5 cursor-pointer' onClick={showPasswordText} />}
+                                </span>
+                                <div><Link to="/forget-password" state={{email}}className="link link-hover text-primary">Forgot password?</Link></div>
                                 <button className="btn btn-neutral mt-4">Login</button>
 
                                 <Link to="/auth/register" className="mt-4 block text-center text-[14px]">

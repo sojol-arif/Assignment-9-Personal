@@ -5,6 +5,7 @@ import app from '../firebase/firebase.config';
 import { signOut } from 'firebase/auth';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { updateProfile } from 'firebase/auth';
+import { sendPasswordResetEmail } from 'firebase/auth';
 
 export const AuthContext = createContext();
 const auth = getAuth();
@@ -33,6 +34,11 @@ const AuthProvider = ({children}) => {
         return updateProfile(auth.currentUser, updateProfileUser);
     }
 
+    const forgotPassword = (email) => {
+        setLoading(true);
+        return sendPasswordResetEmail(auth, email)
+    }
+
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             setLoading(true);
@@ -52,7 +58,8 @@ const AuthProvider = ({children}) => {
         createUser,
         logOut,
         signIn,
-        updateUserProfile
+        updateUserProfile,
+        forgotPassword
     }                                     
     return <AuthContext value={authData}>{children}</AuthContext>
 };

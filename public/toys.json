@@ -9,7 +9,8 @@
     "availableQuantity": 75,
     "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving.",
     "pictureURL": "https://images.unsplash.com/photo-1587654780291-39c9404d746b",
-    "subCategory": "Building Blocks"
+    "subCategory": "Building Blocks",
+    "popular": true
   },
   {
     "toyId": 2,
@@ -21,7 +22,8 @@
     "availableQuantity": 60,
     "description": "High-speed RC car with durable design and long battery life.",
     "pictureURL": "https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8",
-    "subCategory": "Electronic Toys"
+    "subCategory": "Electronic Toys",
+    "popular": true
   },
   {
     "toyId": 3,
@@ -33,7 +35,8 @@
     "availableQuantity": 120,
     "description": "Soft and cuddly teddy bear perfect for kids and gifting.",
     "pictureURL": "https://images.unsplash.com/photo-1545558014-8692077e9b5c",
-    "subCategory": "Soft Toys"
+    "subCategory": "Soft Toys",
+    "popular": true
   },
   {
     "toyId": 4,
@@ -45,7 +48,8 @@
     "availableQuantity": 45,
     "description": "Complete kitchen pretend play set with utensils and accessories.",
     "pictureURL": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c",
-    "subCategory": "Pretend Play"
+    "subCategory": "Pretend Play",
+    "popular": true
   },
   {
     "toyId": 5,
@@ -57,7 +61,8 @@
     "availableQuantity": 80,
     "description": "Challenging 3D puzzle game that enhances logic and thinking skills.",
     "pictureURL": "https://images.unsplash.com/photo-1596495578065-6e0763fa1178",
-    "subCategory": "Brain Games"
+    "subCategory": "Brain Games",
+    "popular": false
   },
   {
     "toyId": 6,
@@ -69,7 +74,8 @@
     "availableQuantity": 35,
     "description": "Classic electric train set with tracks and lights.",
     "pictureURL": "https://images.unsplash.com/photo-1607082350899-7e105aa886ae",
-    "subCategory": "Vehicle Toys"
+    "subCategory": "Vehicle Toys",
+    "popular": true
   },
   {
     "toyId": 7,
@@ -81,7 +87,8 @@
     "availableQuantity": 90,
     "description": "Detailed superhero figure with movable joints.",
     "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1",
-    "subCategory": "Collectibles"
+    "subCategory": "Collectibles",
+    "popular": false
   },
   {
     "toyId": 8,
@@ -93,7 +100,8 @@
     "availableQuantity": 150,
     "description": "High-pressure water gun perfect for summer fun.",
     "pictureURL": "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f",
-    "subCategory": "Outdoor Toys"
+    "subCategory": "Outdoor Toys",
+    "popular": false
   },
   {
     "toyId": 9,
@@ -105,7 +113,8 @@
     "availableQuantity": 50,
     "description": "Mini keyboard for kids with multiple sound effects.",
     "pictureURL": "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
-    "subCategory": "Musical Toys"
+    "subCategory": "Musical Toys",
+    "popular": true
   },
   {
     "toyId": 10,
@@ -117,7 +126,8 @@
     "availableQuantity": 40,
     "description": "Colorful magnetic tiles for creative building.",
     "pictureURL": "https://images.unsplash.com/photo-1587654780291-39c9404d746b",
-    "subCategory": "Educational Toys"
+    "subCategory": "Educational Toys",
+    "popular": true
   },
   {
     "toyId": 11,
@@ -129,7 +139,8 @@
     "availableQuantity": 25,
     "description": "Compact drone with easy controls for beginners.",
     "pictureURL": "https://images.unsplash.com/photo-1508610048659-a06b669e3321",
-    "subCategory": "Electronic Toys"
+    "subCategory": "Electronic Toys",
+    "popular": true
   },
   {
     "toyId": 12,
@@ -141,7 +152,8 @@
     "availableQuantity": 70,
     "description": "Starter Lego pack for beginners with vibrant pieces.",
     "pictureURL": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088",
-    "subCategory": "Building Blocks"
+    "subCategory": "Building Blocks",
+    "popular": true
   },
   {
     "toyId": 13,
@@ -153,7 +165,8 @@
     "availableQuantity": 65,
     "description": "Doctor role play set with stethoscope and tools.",
     "pictureURL": "https://images.unsplash.com/photo-1581578731548-c64695cc6952",
-    "subCategory": "Pretend Play"
+    "subCategory": "Pretend Play",
+    "popular": false
   },
   {
     "toyId": 14,
@@ -165,7 +178,8 @@
     "availableQuantity": 20,
     "description": "AI robot toy that can talk, move, and interact.",
     "pictureURL": "https://images.unsplash.com/photo-1581091012184-7c8f5c8b0b6a",
-    "subCategory": "Electronic Toys"
+    "subCategory": "Electronic Toys",
+    "popular": true
   },
   {
     "toyId": 15,
@@ -177,7 +191,8 @@
     "availableQuantity": 85,
     "description": "Fun indoor bowling game for kids.",
     "pictureURL": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db",
-    "subCategory": "Sports Toys"
+    "subCategory": "Sports Toys",
+    "popular": false
   },
   {
     "toyId": 16,
@@ -189,7 +204,8 @@
     "availableQuantity": 55,
     "description": "Mini guitar toy for kids learning music.",
     "pictureURL": "https://images.unsplash.com/photo-1510915361894-db8b60106cb1",
-    "subCategory": "Musical Toys"
+    "subCategory": "Musical Toys",
+    "popular": true
   },
   {
     "toyId": 17,
@@ -201,7 +217,8 @@
     "availableQuantity": 40,
     "description": "Deluxe pretend kitchen play set.",
     "pictureURL": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c",
-    "subCategory": "Pretend Play"
+    "subCategory": "Pretend Play",
+    "popular": true
   },
   {
     "toyId": 18,
@@ -213,7 +230,8 @@
     "availableQuantity": 30,
     "description": "Space rocket toy with lights and sounds.",
     "pictureURL": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa",
-    "subCategory": "Educational Toys"
+    "subCategory": "Educational Toys",
+    "popular": true
   },
   {
     "toyId": 19,
@@ -225,7 +243,8 @@
     "availableQuantity": 95,
     "description": "Magnetic fishing game for kids.",
     "pictureURL": "https://images.unsplash.com/photo-1601758064221-7c3a3c3f1b2f",
-    "subCategory": "Brain Games"
+    "subCategory": "Brain Games",
+    "popular": false
   },
   {
     "toyId": 20,
@@ -237,6 +256,7 @@
     "availableQuantity": 10,
     "description": "Large inflatable jumping castle for outdoor fun.",
     "pictureURL": "https://images.unsplash.com/photo-1596464716127-f2a82984de30",
-    "subCategory": "Outdoor Toys"
+    "subCategory": "Outdoor Toys",
+    "popular": true
   }
 ]

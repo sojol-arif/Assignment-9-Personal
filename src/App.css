@@ -18,9 +18,13 @@
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-weight: 700;
   opacity: 1;
 }
+
+.menu-part a.active{
+  color: #f76188;
+}
+
 .swiper-pagination{
   position: static !important;
 }
@@ -54,6 +58,11 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 /* Form CSS */
-form input{
-  margin-bottom: .5rem;
+
+/* Review Slider */
+.reviewSwiper .swiper-slide{
+  opacity: .3;
+}
+.reviewSwiper .swiper-slide.swiper-slide-active{
+  opacity: 1;
 }

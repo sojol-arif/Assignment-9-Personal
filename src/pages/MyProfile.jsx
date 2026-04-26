@@ -5,9 +5,10 @@ import { use } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import { useNavigate } from 'react-router';
 import { useEffect } from 'react';
+import Footer from '../components/Footer';
 
 const MyProfile = () => {
-    const { user, logOut, setUser, updateUserProfile} = use(AuthContext);
+    const { user, logOut, setUser, updateUserProfile } = use(AuthContext);
     console.log("Check user in MyProfile:", user);
     const navigate = useNavigate();
 
@@ -21,14 +22,14 @@ const MyProfile = () => {
         const photo = form.photo.value;
 
         updateUserProfile({ displayName: name, photoURL: photo }).
-        then(() => {
-            setUser({ ...user, displayName: name, photoURL: photo });
-        }).catch((error) => {
-            // An error occurred
-            // ...
-            setUser(user);
-            console.log("Profile update error", error);
-        });
+            then(() => {
+                setUser({ ...user, displayName: name, photoURL: photo });
+            }).catch((error) => {
+                // An error occurred
+                // ...
+                setUser(user);
+                console.log("Profile update error", error);
+            });
     }
 
     const handleLogout = (e) => {
@@ -49,8 +50,8 @@ const MyProfile = () => {
             <main>
                 <div className='bg-gray-100'>
                     <div className='max-w-[1200px] mx-auto py-10 px-5 mb-10'>
-                        <h1 className='text-4xl font-bold mb-4'>My Account</h1>
-                        <p className='text-gray-700 text-[20px]'>Manage your account details and settings</p>
+                        <h1 className='text-4xl font-bold mb-4 text-center text-primary'>My Account</h1>
+                        <p className='text-gray-700 text-[20px] text-center'>Manage your account details and settings</p>
                     </div>
                 </div>
                 <div className="flex justify-center w-full py-5 max-w-[1200px] mx-auto gap-10 px-5">
@@ -72,15 +73,18 @@ const MyProfile = () => {
                         <form onSubmit={handleUpdate}>
                             <fieldset className='border border-gray-300 rounded-md p-5 flex flex-col gap-2'>
                                 <label className="label">Name</label>
-                                <input type="text" name='name' className="input w-full" placeholder="Name" />
+                                <input type="text" name='name' className="input w-full" placeholder="Name" required/>
                                 <label className='label'>Photo</label>
-                                <input type="text" name='photo' className="input w-full" placeholder="Photo URL" />
+                                <input type="text" name='photo' className="input w-full" placeholder="Photo URL" required/>
                                 <button className="btn btn-neutral mt-4">Save Changes</button>
                             </fieldset>
                         </form>
                     </div>
                 </div>
             </main>
+            <footer>
+                <Footer></Footer>
+            </footer>
         </div>
     );
 };
